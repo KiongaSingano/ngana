@@ -1,1103 +1,1045 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 91932aa18a1a2827a79b6884ae1b2c4a519f98bf
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-  <meta name="description" content="Grupo Ngana: fotografia, audiovisual, motion graphics, design gráfico, live streaming, iluminação e sonorização.">
-  <meta name="theme-color" content="#080b10">
-
-  <title>Grupo Ngana | Criamos experiências. Registamos emoções.</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-  <style>
-    :root {
-      --bg: #080b10;
-      --panel: #101722;
-      --panel2: #0c121c;
-      --blue: #2d8cff;
-      --blue2: #78b7ff;
-      --white: #f4f7fb;
-      --muted: #a6b0bf;
-      --line: rgba(70,145,235,.24);
-      --max: 1180px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 85px;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--white);
-      font-family: 'Montserrat', sans-serif;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .wrap {
-      width: min(90%, var(--max));
-      margin: auto;
-    }
-
-    .section {
-      padding: 100px 0;
-    }
-
-    .section-tag {
-      color: var(--blue2);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .section-title {
-      font-size: clamp(30px, 5vw, 48px);
-      line-height: 1.2;
-      margin-bottom: 20px;
-      font-weight: 800;
-    }
-
-    .section-description {
-      color: var(--muted);
-      max-width: 650px;
-      font-size: 15px;
-    }
-
-    .blue {
-      color: var(--blue2);
-    }
-
-    /* HEADER */
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(8,11,16,.92);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      min-height: 78px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .brand {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      white-space: nowrap;
-    }
-
-    .brand span {
-      color: var(--blue);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 12px;
-      color: var(--muted);
-      transition: .3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--blue2);
-    }
-
-    .nav-button {
-      padding: 11px 19px;
-      border: 1px solid var(--blue);
-      border-radius: 4px;
-      color: var(--blue2);
-      font-size: 12px;
-      font-weight: 700;
-      transition: .3s;
-    }
-
-    .nav-button:hover {
-      background: var(--blue);
-      color: white;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      background:
-        linear-gradient(90deg, rgba(8,11,16,.98) 0%, rgba(8,11,16,.85) 48%, rgba(8,11,16,.35) 100%),
-        linear-gradient(0deg, var(--bg), transparent 35%),
-        url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=85") center/cover;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      padding-top: 80px;
-    }
-
-    .hero-tag {
-      display: inline-block;
-      color: var(--blue2);
-      border-left: 3px solid var(--blue);
-      padding-left: 15px;
-      margin-bottom: 25px;
-      letter-spacing: 4px;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      font-size: clamp(42px, 7vw, 82px);
-      line-height: 1.08;
-      font-weight: 800;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 span {
-      color: var(--blue2);
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-    }
-
-    .hero p {
-      color: #c4ccd8;
-      font-size: 16px;
-      max-width: 580px;
-      margin-bottom: 35px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 15px 25px;
-      border-radius: 3px;
-      font-size: 12px;
-      font-weight: 700;
-      transition: .3s;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: var(--blue);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #1476e5;
-      transform: translateY(-3px);
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,.35);
-      color: white;
-    }
-
-    .btn-outline:hover {
-      border-color: var(--blue2);
-      color: var(--blue2);
-    }
-
-    .hero-bottom {
-      position: absolute;
-      bottom: 35px;
-      left: 5%;
-      right: 5%;
-      display: flex;
-      justify-content: space-between;
-      color: var(--muted);
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    /* ABOUT */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .about-image {
-      min-height: 430px;
-      background:
-        linear-gradient(0deg, rgba(8,11,16,.3), transparent),
-        url("https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85") center/cover;
-      border: 1px solid var(--line);
-      position: relative;
-    }
-
-    .about-image::after {
-      content: "";
-      position: absolute;
-      inset: 18px -18px -18px 18px;
-      border: 1px solid var(--blue);
-      z-index: -1;
-    }
-
-    .about-text p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .about-highlight {
-      margin-top: 30px;
-      padding: 20px;
-      border-left: 3px solid var(--blue);
-      background: var(--panel);
-      color: var(--blue2);
-      font-weight: 700;
-      font-size: 15px;
-    }
-
-    /* SERVICES */
-
-    .services {
-      background: var(--panel2);
-    }
-
-    .services-heading {
-      margin-bottom: 50px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background: var(--panel);
-      padding: 35px 28px;
-      border: 1px solid var(--line);
-      transition: .35s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-7px);
-      border-color: var(--blue);
-      background: #131f30;
-    }
-
-    .service-icon {
-      width: 55px;
-      height: 55px;
-      display: grid;
-      place-items: center;
-      background: rgba(45,140,255,.12);
-      color: var(--blue2);
-      font-size: 22px;
-      margin-bottom: 25px;
-      border-radius: 4px;
-    }
-
-    .service-card h3 {
-      font-size: 17px;
-      margin-bottom: 12px;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* PORTFOLIO */
-
-    .portfolio-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .portfolio-item {
-      height: 310px;
-      position: relative;
-      overflow: hidden;
-      background: var(--panel);
-      border: 1px solid var(--line);
-    }
-
-    .portfolio-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: .6s;
-      opacity: .8;
-    }
-
-    .portfolio-item:hover img {
-      transform: scale(1.08);
-      opacity: 1;
-    }
-
-    .portfolio-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      padding: 25px;
-      background: linear-gradient(0deg, rgba(5,9,15,.95), transparent 75%);
-    }
-
-    .portfolio-overlay span {
-      color: var(--blue2);
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .portfolio-overlay h3 {
-      font-size: 19px;
-      margin-top: 5px;
-    }
-
-    /* CONTACT CTA */
-
-    .contact-cta {
-      background:
-        linear-gradient(90deg, rgba(8,11,16,.96), rgba(8,11,16,.78)),
-        url("https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1800&q=85") center/cover;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .contact-cta h2 {
-      font-size: clamp(30px, 5vw, 50px);
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .contact-cta p {
-      color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto 30px;
-      font-size: 14px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #06090e;
-      border-top: 1px solid var(--line);
-      padding: 65px 0 20px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 50px;
-      padding-bottom: 45px;
-    }
-
-    .footer-about p {
-      color: var(--muted);
-      font-size: 13px;
-      max-width: 330px;
-      margin-top: 18px;
-    }
-
-    .footer-column h3 {
-      font-size: 13px;
-      margin-bottom: 20px;
-      color: var(--blue2);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .footer-column ul {
-      list-style: none;
-    }
-
-    .footer-column li {
-      margin-bottom: 12px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .footer-column a:hover {
-      color: var(--blue2);
-    }
-
-    .footer-contact a {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .footer-contact i {
-      color: var(--blue2);
-      width: 18px;
-    }
-
-    .social {
-      display: flex;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .social a {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--line);
-      color: var(--blue2);
-      border-radius: 50%;
-      transition: .3s;
-    }
-
-    .social a:hover {
-      background: var(--blue);
-      color: white;
-      border-color: var(--blue);
-      transform: translateY(-4px);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid var(--line);
-      padding-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: #788394;
-      font-size: 11px;
-    }
-
-    /* WHATSAPP FLOAT */
-
-    .whatsapp-float {
-      position: fixed;
-      right: 25px;
-      bottom: 25px;
-      z-index: 900;
-      width: 55px;
-      height: 55px;
-      display: grid;
-      place-items: center;
-      background: #25d366;
-      color: white;
-      border-radius: 50%;
-      font-size: 27px;
-      box-shadow: 0 5px 25px rgba(37,211,102,.25);
-      transition: .3s;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 900px) {
-      .nav-links {
-        gap: 15px;
-      }
-
-      .nav-links a {
-        font-size: 11px;
-      }
-
-      .about-grid {
-        gap: 40px;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        gap: 30px;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .section {
-        padding: 75px 0;
-      }
-
-      .nav {
-        min-height: 70px;
-        flex-wrap: wrap;
-        padding: 12px 0;
-      }
-
-      .nav-links {
-        order: 3;
-        width: 100%;
-        justify-content: space-between;
-        gap: 8px;
-        padding-bottom: 8px;
-      }
-
-      .nav-links a {
-        font-size: 10px;
-      }
-
-      .nav-button {
-        font-size: 10px;
-        padding: 8px 11px;
-      }
-
-      .hero {
-        min-height: 90vh;
-      }
-
-      .hero-content {
-        padding-top: 125px;
-        padding-bottom: 70px;
-      }
-
-      .hero h1 {
-        font-size: 43px;
-      }
-
-      .hero p {
-        font-size: 14px;
-      }
-
-      .hero-bottom {
-        display: none;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .about-image {
-        min-height: 300px;
-        margin-right: 15px;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .portfolio-heading {
-        display: block;
-      }
-
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .portfolio-item {
-        height: 270px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-      }
-
-      .contact-cta {
-        padding: 75px 20px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b10">
+<meta name="description" content="Grupo Ngana. Criamos experiências. Registamos emoções. Fotografia, audiovisual, design, streaming, luz e som.">
+
+<title>Grupo Ngana | Criamos experiências</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+:root {
+  --bg:#080b10;
+  --panel:#101722;
+  --blue:#2d8cff;
+  --blue2:#78b7ff;
+  --white:#f4f7fb;
+  --muted:#a6b0bf;
+  --line:rgba(70,145,235,.24);
+}
+
+* {box-sizing:border-box;margin:0;padding:0}
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body {
+  background:var(--bg);
+  color:var(--white);
+  font-family:"DM Sans",sans-serif;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+a {color:inherit;text-decoration:none}
+button {font:inherit}
+img {max-width:100%;display:block}
+
+.wrap {width:min(1160px,90%);margin:auto}
+
+.eyebrow {
+  color:var(--blue2);
+  font-size:.72rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+section {padding:105px 0}
+
+/* HEADER */
+
+header {
+  position:fixed;
+  z-index:1000;
+  top:0;
+  left:0;
+  width:100%;
+  background:rgba(8,11,16,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav {
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.brand {
+  font-family:Manrope,sans-serif;
+  font-weight:800;
+  font-size:1.35rem;
+  letter-spacing:.08em;
+  white-space:nowrap;
+}
+
+.brand span {color:var(--blue)}
+
+.navlinks {
+  display:flex;
+  align-items:center;
+  gap:32px;
+}
+
+.navlinks a {
+  color:#d5deea;
+  font-size:.84rem;
+  font-weight:600;
+  transition:.25s;
+  position:relative;
+}
+
+.navlinks a::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  width:0;
+  height:2px;
+  background:var(--blue);
+  transition:.25s;
+}
+
+.navlinks a:hover {color:var(--blue2)}
+.navlinks a:hover::after {width:100%}
+
+.nav-cta,.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 22px;
+  border:1px solid var(--blue);
+  border-radius:3px;
+  color:white;
+  font-size:.79rem;
+  font-weight:700;
+  letter-spacing:.04em;
+  transition:.3s;
+}
+
+.nav-cta {
+  background:rgba(45,140,255,.12);
+  white-space:nowrap;
+}
+
+.nav-cta:hover,.btn:hover {
+  background:var(--blue);
+  transform:translateY(-3px);
+  box-shadow:0 8px 25px rgba(45,140,255,.2);
+}
+
+.menu {
+  display:none;
+  width:43px;
+  height:43px;
+  border:1px solid var(--line);
+  background:var(--panel);
+  color:white;
+  border-radius:3px;
+  font-size:1.2rem;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height:760px;
+  height:100vh;
+  max-height:950px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(5,8,13,.95),rgba(5,8,13,.68) 55%,rgba(5,8,13,.18)),
+    linear-gradient(0deg,#080b10,transparent 35%),
+    url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=88") center/cover;
+}
+
+.hero-content {
+  padding-top:80px;
+  max-width:760px;
+}
+
+.hero h1 {
+  font-family:Manrope,sans-serif;
+  font-size:clamp(3.2rem,8vw,7.1rem);
+  line-height:.99;
+  letter-spacing:-.065em;
+  margin:22px 0 25px;
+  font-weight:800;
+}
+
+.hero h1 span {color:var(--blue2)}
+
+.hero p {
+  max-width:560px;
+  color:#d1d8e2;
+  font-size:1.05rem;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+
+.hero-actions {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn.primary {
+  background:var(--blue);
+  border-color:var(--blue);
+}
+
+.btn.ghost {
+  border-color:rgba(255,255,255,.4);
+}
+
+.btn.ghost:hover {border-color:var(--blue)}
+
+.scroll-note {
+  position:absolute;
+  bottom:35px;
+  left:5%;
+  color:#d0d8e3;
+  font-size:.68rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.scroll-note::before {
+  content:"";
+  width:42px;
+  height:1px;
+  background:var(--blue);
+}
+
+/* SOBRE */
+
+.intro {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.intro-image {
+  min-height:470px;
+  background:
+    linear-gradient(rgba(8,11,16,.1),rgba(8,11,16,.2)),
+    url("https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1200&q=85") center/cover;
+  position:relative;
+}
+
+.intro-image::after {
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(120,183,255,.6);
+}
+
+.intro-copy h2 {
+  font:800 clamp(2.3rem,4.4vw,4.1rem)/1.08 Manrope,sans-serif;
+  letter-spacing:-.055em;
+  margin:15px 0 24px;
+}
+
+.intro-copy h2 span {color:var(--blue2)}
+
+.intro-copy p {
+  color:var(--muted);
+  line-height:1.9;
+  margin-bottom:15px;
+}
+
+.stats {
+  display:flex;
+  gap:38px;
+  margin-top:35px;
+}
+
+.stat strong {
+  display:block;
+  font:800 1.8rem Manrope;
+  color:var(--blue2);
+}
+
+.stat small {
+  color:var(--muted);
+  font-size:.76rem;
+}
+
+/* SERVIÇOS */
+
+.services {background:#0c1119}
+
+.section-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:45px;
+}
+
+.section-head h2 {
+  font:800 clamp(2.2rem,5vw,4rem)/1.05 Manrope,sans-serif;
+  letter-spacing:-.05em;
+  margin-top:14px;
+}
+
+.section-head p {
+  color:var(--muted);
+  line-height:1.8;
+  max-width:390px;
+}
+
+.service-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.service {
+  padding:30px 26px;
+  min-height:220px;
+  background:linear-gradient(145deg,#141e2b,#0d131c);
+  border:1px solid rgba(255,255,255,.07);
+  transition:.3s;
+}
+
+.service:hover {
+  border-color:var(--blue);
+  transform:translateY(-6px);
+  background:#142237;
+}
+
+.service .num {
+  color:var(--blue2);
+  font-size:.72rem;
+  letter-spacing:.16em;
+}
+
+.service h3 {
+  font:700 1.25rem Manrope;
+  margin:35px 0 10px;
+}
+
+.service p {
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.7;
+}
+
+/* PORTFÓLIO */
+
+.work-grid {
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  grid-template-rows:260px 260px;
+  gap:15px;
+}
+
+.work {
+  position:relative;
+  overflow:hidden;
+  background-size:cover;
+  background-position:center;
+  min-width:0;
+}
+
+.work:first-child {
+  grid-row:span 2;
+  background-image:url("https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=85");
+}
+
+.work:nth-child(2) {
+  background-image:url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1000&q=85");
+}
+
+.work:nth-child(3) {
+  background-image:url("https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85");
+}
+
+.work::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(8,11,16,.15);
+  transition:.4s;
+}
+
+.work::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(4,7,12,.9),transparent 70%);
+}
+
+.work:hover::before {
+  background:rgba(8,11,16,.45);
+}
+
+.work-label {
+  position:absolute;
+  z-index:1;
+  bottom:24px;
+  left:25px;
+}
+
+.work-label small {
+  color:var(--blue2);
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.work-label h3 {
+  font:700 1.35rem Manrope;
+  margin-top:7px;
+}
+
+/* CONTACTO */
+
+.cta {
+  padding:90px 0;
+  background:
+    linear-gradient(110deg,rgba(7,12,20,.96),rgba(13,42,75,.88)),
+    url("https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1800&q=80") center/cover;
+  text-align:center;
+}
+
+.cta h2 {
+  font:800 clamp(2.5rem,6vw,5rem)/1.05 Manrope;
+  letter-spacing:-.055em;
+  margin:15px auto 20px;
+  max-width:850px;
+}
+
+.cta p {
+  color:#c3cfde;
+  max-width:570px;
+  margin:0 auto 30px;
+  line-height:1.8;
+}
+
+/* FOOTER */
+
+footer {
+  padding:65px 0 22px;
+  background:#06090e;
+  border-top:1px solid var(--line);
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:50px;
+  padding-bottom:45px;
+}
+
+.footer-about p {
+  color:var(--muted);
+  font-size:.88rem;
+  max-width:330px;
+  margin-top:17px;
+  line-height:1.8;
+}
+
+.footer-column h3 {
+  color:var(--blue2);
+  font-size:.78rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.footer-column ul {list-style:none}
+
+.footer-column li {
+  margin-bottom:13px;
+  color:var(--muted);
+  font-size:.85rem;
+}
+
+.footer-column a {transition:.25s}
+.footer-column a:hover {color:var(--blue2)}
+
+.footer-contact a {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.footer-contact i {
+  width:18px;
+  color:var(--blue2);
+}
+
+/* REDES SOCIAIS */
+
+.social {
+  display:flex;
+  gap:12px;
+  margin-top:24px;
+}
+
+.social a {
+  width:43px;
+  height:43px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(120,183,255,.3);
+  border-radius:50%;
+  background:rgba(45,140,255,.06);
+  color:var(--blue2);
+  font-size:17px;
+  transition:.3s;
+}
+
+.social a:hover {
+  background:var(--blue);
+  border-color:var(--blue);
+  color:white;
+  transform:translateY(-5px);
+  box-shadow:0 7px 20px rgba(45,140,255,.2);
+}
+
+.footer-bottom {
+  border-top:1px solid var(--line);
+  padding-top:22px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#788394;
+  font-size:.74rem;
+}
+
+/* WHATSAPP FLUTUANTE */
+
+.whatsapp-float {
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  z-index:900;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#25d366;
+  color:white;
+  font-size:29px;
+  box-shadow:0 5px 25px rgba(37,211,102,.25);
+  transition:.3s;
+}
+
+.whatsapp-float:hover {
+  transform:scale(1.1);
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width:900px) {
+  .navlinks {gap:17px}
+  .navlinks a {font-size:.76rem}
+  .nav-cta {padding:11px 14px;font-size:.7rem}
+  .intro {gap:40px}
+  .service-grid {grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:800px) {
+  .menu {display:flex;align-items:center;justify-content:center}
+  .nav-cta {display:none}
+
+  .navlinks {
+    display:none;
+    position:absolute;
+    top:calc(100% + 1px);
+    left:5%;
+    right:5%;
+    padding:20px;
+    background:#101722;
+    border:1px solid var(--line);
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+  }
+
+  .navlinks.open {display:flex}
+
+  .navlinks a {
+    display:block;
+    padding:12px 5px;
+    font-size:.9rem;
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+
+  .navlinks a::after {display:none}
+}
+
+@media(max-width:650px) {
+  section {padding:78px 0}
+
+  .wrap {width:88%}
+
+  .nav {min-height:72px}
+
+  .hero {
+    min-height:700px;
+    height:90svh;
+    background-position:58% center;
+  }
+
+  .hero-content {padding-top:75px}
+
+  .hero h1 {font-size:3.45rem}
+
+  .hero p {font-size:.98rem}
+
+  .hero-actions {
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .hero-actions .btn {width:100%}
+
+  .intro {
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .intro-image {
+    min-height:330px;
+    order:2;
+  }
+
+  .section-head {display:block}
+
+  .section-head p {margin-top:20px}
+
+  .service-grid {grid-template-columns:1fr}
+
+  .service {min-height:190px}
+
+  .work-grid {
+    display:flex;
+    flex-direction:column;
+  }
+
+  .work {height:240px}
+
+  .stats {gap:22px}
+
+  .stat strong {font-size:1.5rem}
+
+  .cta {padding:75px 0}
+
+  .footer-grid {
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .footer-bottom {
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .whatsapp-float {
+    width:53px;
+    height:53px;
+    right:17px;
+    bottom:17px;
+  }
+}
+
+@media(max-width:380px) {
+  .hero h1 {font-size:2.9rem}
+  .brand {font-size:1.15rem}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- CABEÇALHO -->
-  <header>
-    <div class="wrap nav">
-      <a href="#inicio" class="brand">GRUPO <span>NGANA</span></a>
+<!-- CABEÇALHO -->
 
-      <ul class="nav-links">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre nós</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#portfolio">Portefólio</a></li>
-        <li><a href="#contactos">Contactos</a></li>
-      </ul>
+<header>
+  <div class="wrap nav">
 
-      <a href="https://wa.me/244946614043" target="_blank" rel="noopener" class="nav-button">
-        Fale connosco
+    <a class="brand" href="#inicio">GRUPO <span>NGANA</span></a>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portefólio</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
+
+    <a class="nav-cta" href="https://wa.me/244946614043" target="_blank" rel="noopener">
+      FALE CONNOSCO <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <button class="menu" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navlinks">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+</header>
+
+<main>
+
+<!-- INÍCIO -->
+
+<section class="hero" id="inicio">
+  <div class="wrap hero-content">
+
+    <div class="eyebrow">Produção criativa · Audiovisual · Eventos</div>
+
+    <h1>
+      Criamos<br>
+      <span>experiências.</span>
+    </h1>
+
+    <p>
+      Criamos experiências. Registamos emoções.
+      Damos vida a ideias através da imagem, do som,
+      da luz e de narrativas que ficam na memória.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn primary" href="#portfolio">
+        EXPLORAR PORTFÓLIO <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <a class="btn ghost" href="#servicos">
+        OS NOSSOS SERVIÇOS <i class="fa-solid fa-play"></i>
       </a>
     </div>
-  </header>
 
-  <main>
+  </div>
 
-    <!-- INÍCIO -->
-    <section class="hero" id="inicio">
-      <div class="wrap">
-        <div class="hero-content">
-          <span class="hero-tag">Criatividade · Tecnologia · Experiência</span>
+  <div class="scroll-note">Deslize para descobrir</div>
+</section>
 
-          <h1>
-            Criamos<br>
-            experiências.<br>
-            <span>Registamos emoções.</span>
-          </h1>
+<!-- SOBRE -->
 
-          <p>
-            Transformamos ideias em experiências visuais e audiovisuais.
-            Damos vida a momentos, marcas e eventos através da criatividade,
-            da tecnologia e da comunicação.
-          </p>
+<section id="sobre">
+  <div class="wrap intro">
 
-          <div class="hero-buttons">
-            <a href="#portfolio" class="btn btn-primary">
-              Explorar trabalhos <i class="fa-solid fa-arrow-right"></i>
-            </a>
+    <div class="intro-image" role="img" aria-label="Produção audiovisual"></div>
 
-            <a href="https://wa.me/244946614043" target="_blank" rel="noopener" class="btn btn-outline">
-              <i class="fa-brands fa-whatsapp"></i> Contactar
-            </a>
-          </div>
+    <div class="intro-copy">
+      <div class="eyebrow">Quem somos</div>
+
+      <h2>
+        Ideias que ganham forma.
+        <span>Momentos que ficam.</span>
+      </h2>
+
+      <p>
+        O Grupo Ngana é uma marca dedicada à criação de experiências
+        visuais e técnicas. Unimos criatividade, tecnologia e
+        sensibilidade para contar histórias, valorizar marcas e
+        transformar eventos em momentos memoráveis.
+      </p>
+
+      <p>
+        Da primeira ideia à execução, trabalhamos para que cada
+        detalhe tenha intenção e cada produção tenha impacto.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>360°</strong>
+          <small>Soluções criativas</small>
+        </div>
+
+        <div class="stat">
+          <strong>∞</strong>
+          <small>Possibilidades</small>
         </div>
       </div>
+    </div>
 
-      <div class="hero-bottom">
-        <span>Grupo Ngana</span>
-        <span>Produção de experiências visuais</span>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+
+<section class="services" id="servicos">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">O que fazemos</div>
+        <h2>Serviços com<br>impacto visual.</h2>
       </div>
-    </section>
 
-    <!-- SOBRE -->
-    <section class="section" id="sobre">
-      <div class="wrap about-grid">
+      <p>
+        Uma abordagem integrada para criar, produzir e transmitir
+        experiências com qualidade e identidade.
+      </p>
+    </div>
 
-        <div class="about-image"></div>
+    <div class="service-grid">
 
-        <div class="about-text">
-          <div class="section-tag">Quem somos</div>
+      <article class="service">
+        <span class="num">01 / IMAGEM</span>
+        <h3>Fotografia</h3>
+        <p>Registo profissional de pessoas, marcas, produtos e eventos.</p>
+      </article>
 
-          <h2 class="section-title">
-            Mais do que imagens,<br>
-            criamos <span class="blue">experiências.</span>
-          </h2>
+      <article class="service">
+        <span class="num">02 / VÍDEO</span>
+        <h3>Produção Audiovisual</h3>
+        <p>Captação e produção de conteúdos que contam histórias e comunicam ideias.</p>
+      </article>
 
-          <p>
-            O Grupo Ngana é uma iniciativa criativa dedicada à produção
-            audiovisual, fotografia, design e soluções técnicas para eventos
-            e comunicação.
-          </p>
+      <article class="service">
+        <span class="num">03 / ANIMAÇÃO</span>
+        <h3>Motion Graphics</h3>
+        <p>Animação gráfica, títulos e conteúdos dinâmicos para marcas e ecrãs.</p>
+      </article>
 
-          <p>
-            Acreditamos que cada projecto tem uma história para contar.
-            Por isso, combinamos criatividade, inovação e profissionalismo
-            para transformar ideias em resultados visuais marcantes.
-          </p>
+      <article class="service">
+        <span class="num">04 / IDENTIDADE</span>
+        <h3>Design Gráfico</h3>
+        <p>Conceitos visuais, identidade, materiais promocionais e comunicação.</p>
+      </article>
 
-          <p>
-            Trabalhamos para valorizar marcas, eternizar momentos e proporcionar
-            experiências que permanecem na memória.
-          </p>
+      <article class="service">
+        <span class="num">05 / TRANSMISSÃO</span>
+        <h3>Live Streaming</h3>
+        <p>Transmissão em directo de eventos, conferências e experiências especiais.</p>
+      </article>
 
-          <div class="about-highlight">
-            Criamos experiências. Registamos emoções.
-          </div>
-        </div>
+      <article class="service">
+        <span class="num">06 / PRODUÇÃO TÉCNICA</span>
+        <h3>Luz &amp; Som</h3>
+        <p>Iluminação e sonorização para eventos, palcos e ambientes profissionais.</p>
+      </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+
+<section id="portfolio">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Selecção visual</div>
+        <h2>O nosso universo<br>criativo.</h2>
       </div>
-    </section>
 
-    <!-- SERVIÇOS -->
-    <section class="section services" id="servicos">
-      <div class="wrap">
+      <p>
+        Uma amostra visual das áreas em que trabalhamos.
+        Esta galeria será substituída pelos projectos reais do Grupo Ngana.
+      </p>
+    </div>
 
-        <div class="services-heading">
-          <div class="section-tag">O que fazemos</div>
-          <h2 class="section-title">As nossas <span class="blue">soluções</span></h2>
-          <p class="section-description">
-            Oferecemos soluções criativas e técnicas para diferentes necessidades,
-            desde a comunicação visual até à produção de eventos.
-          </p>
+    <div class="work-grid">
+
+      <a class="work" href="#contactos" aria-label="Produção de eventos">
+        <div class="work-label">
+          <small>Produção de eventos</small>
+          <h3>Energia em cada momento</h3>
         </div>
+      </a>
 
-        <div class="services-grid">
-
-          <article class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-camera"></i></div>
-            <h3>Fotografia</h3>
-            <p>
-              Cobertura fotográfica de eventos, sessões, retratos e produção
-              de imagens para marcas e instituições.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-video"></i></div>
-            <h3>Produção Audiovisual</h3>
-            <p>
-              Captação e produção de vídeos institucionais, promocionais,
-              eventos e conteúdos digitais.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            <h3>Motion Graphics</h3>
-            <p>
-              Animações gráficas, vinhetas, títulos animados e conteúdos
-              visuais dinâmicos para comunicação.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
-            <h3>Design Gráfico</h3>
-            <p>
-              Identidade visual, flyers, cartazes, materiais publicitários
-              e soluções de comunicação gráfica.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
-            <h3>Live Streaming</h3>
-            <p>
-              Transmissão em directo de eventos, conferências, cultos e
-              actividades institucionais.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
-            <h3>Luz e Som</h3>
-            <p>
-              Soluções técnicas de iluminação e sonorização para eventos,
-              espectáculos e produções.
-            </p>
-          </article>
-
+      <a class="work" href="#contactos" aria-label="Fotografia">
+        <div class="work-label">
+          <small>Fotografia</small>
+          <h3>Detalhes que contam</h3>
         </div>
-      </div>
-    </section>
+      </a>
 
-    <!-- PORTEFÓLIO -->
-    <section class="section" id="portfolio">
-      <div class="wrap">
-
-        <div class="portfolio-heading">
-          <div>
-            <div class="section-tag">O nosso trabalho</div>
-            <h2 class="section-title">Criatividade em <span class="blue">acção</span></h2>
-            <p class="section-description">
-              Uma amostra visual do universo criativo do Grupo Ngana.
-            </p>
-          </div>
+      <a class="work" href="#contactos" aria-label="Audiovisual">
+        <div class="work-label">
+          <small>Audiovisual</small>
+          <h3>Histórias em movimento</h3>
         </div>
+      </a>
 
-        <div class="portfolio-grid">
+    </div>
+  </div>
+</section>
 
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=85" alt="Equipamento fotográfico">
-            <div class="portfolio-overlay">
-              <span>Imagem</span>
-              <h3>Fotografia</h3>
-            </div>
-          </article>
+<!-- CONTACTOS -->
 
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=85" alt="Produção audiovisual">
-            <div class="portfolio-overlay">
-              <span>Produção</span>
-              <h3>Audiovisual</h3>
-            </div>
-          </article>
+<section class="cta" id="contactos">
+  <div class="wrap">
 
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=85" alt="Evento com iluminação">
-            <div class="portfolio-overlay">
-              <span>Eventos</span>
-              <h3>Produção de eventos</h3>
-            </div>
-          </article>
+    <div class="eyebrow">Vamos criar algo memorável?</div>
 
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85" alt="Trabalho de design">
-            <div class="portfolio-overlay">
-              <span>Comunicação</span>
-              <h3>Design Gráfico</h3>
-            </div>
-          </article>
+    <h2>A sua próxima ideia merece ganhar vida.</h2>
 
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=900&q=85" alt="Equipamento de transmissão">
-            <div class="portfolio-overlay">
-              <span>Tecnologia</span>
-              <h3>Live Streaming</h3>
-            </div>
-          </article>
+    <p>
+      Conte-nos o que está a imaginar. Estamos prontos para conversar
+      sobre a sua próxima produção, evento ou projecto.
+    </p>
 
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=85" alt="Iluminação de palco">
-            <div class="portfolio-overlay">
-              <span>Produção técnica</span>
-              <h3>Luz e Som</h3>
-            </div>
-          </article>
+    <a class="btn primary" href="https://wa.me/244946614043" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      INICIAR CONVERSA
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
 
-        </div>
-      </div>
-    </section>
+  </div>
+</section>
 
-    <!-- CONTACTO -->
-    <section class="contact-cta" id="contactos">
-      <div class="wrap">
-        <div class="section-tag">Vamos trabalhar juntos?</div>
+</main>
 
-        <h2>
-          A sua ideia merece<br>
-          <span class="blue">ganhar vida.</span>
-        </h2>
+<!-- RODAPÉ -->
+
+<footer>
+  <div class="wrap">
+
+    <div class="footer-grid">
+
+      <div class="footer-about">
+        <a class="brand" href="#inicio">GRUPO <span>NGANA</span></a>
 
         <p>
-          Tem um evento, uma marca ou um projecto em mente?
-          Entre em contacto connosco e vamos criar algo memorável.
+          Criamos experiências. Registamos emoções.
+          Criatividade, tecnologia e comunicação ao serviço de
+          produções visuais e audiovisuais.
         </p>
 
-        <a href="https://wa.me/244946614043" target="_blank" rel="noopener" class="btn btn-primary">
-          <i class="fa-brands fa-whatsapp"></i>
-          Fale connosco pelo WhatsApp
-        </a>
+        <div class="social">
+
+          <a href="https://www.instagram.com/kionga_singano/"
+             target="_blank" rel="noopener"
+             aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/kiongasingano"
+             target="_blank" rel="noopener"
+             aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="https://wa.me/244946614043"
+             target="_blank" rel="noopener"
+             aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+        </div>
       </div>
-    </section>
 
-  </main>
+      <div class="footer-column">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Portefólio</a></li>
+          <li><a href="#contactos">Contactos</a></li>
+        </ul>
+      </div>
 
-  <!-- RODAPÉ -->
-  <footer>
-    <div class="wrap">
+      <div class="footer-column footer-contact">
+        <h3>Contactos</h3>
 
-      <div class="footer-grid">
-
-        <div class="footer-about">
-          <a href="#inicio" class="brand">GRUPO <span>NGANA</span></a>
-
-          <p>
-            Criatividade, tecnologia e comunicação ao serviço de experiências
-            visuais e audiovisuais.
-          </p>
-
-          <div class="social">
-            <a href="https://www.instagram.com/kionga_singano/" target="_blank" rel="noopener" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
+        <ul>
+          <li>
+            <a href="tel:+244946614043">
+              <i class="fa-solid fa-phone"></i>
+              946 614 043
             </a>
+          </li>
 
-            <a href="https://www.facebook.com/kiongasingano" target="_blank" rel="noopener" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a href="https://wa.me/244946614043" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <li>
+            <a href="https://wa.me/244946614043" target="_blank" rel="noopener">
               <i class="fa-brands fa-whatsapp"></i>
+              WhatsApp
             </a>
-          </div>
-        </div>
+          </li>
 
-        <div class="footer-column">
-          <h3>Navegação</h3>
-          <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre nós</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#portfolio">Portefólio</a></li>
-          </ul>
-        </div>
+          <li>
+            <a href="https://www.instagram.com/kionga_singano/" target="_blank" rel="noopener">
+              <i class="fa-brands fa-instagram"></i>
+              Instagram
+            </a>
+          </li>
 
-        <div class="footer-column footer-contact">
-          <h3>Contactos</h3>
-          <ul>
-            <li>
-              <a href="tel:+244946614043">
-                <i class="fa-solid fa-phone"></i>
-                946 614 043
-              </a>
-            </li>
-
-            <li>
-              <a href="https://wa.me/244946614043" target="_blank" rel="noopener">
-                <i class="fa-brands fa-whatsapp"></i>
-                WhatsApp
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.instagram.com/kionga_singano/" target="_blank" rel="noopener">
-                <i class="fa-brands fa-instagram"></i>
-                @kionga_singano
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.facebook.com/kiongasingano" target="_blank" rel="noopener">
-                <i class="fa-brands fa-facebook-f"></i>
-                Facebook
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <span>© <span id="ano"></span> Grupo Ngana. Todos os direitos reservados.</span>
-        <span>Criamos experiências. Registamos emoções.</span>
+          <li>
+            <a href="https://www.facebook.com/kiongasingano" target="_blank" rel="noopener">
+              <i class="fa-brands fa-facebook-f"></i>
+              Facebook
+            </a>
+          </li>
+        </ul>
       </div>
 
     </div>
-  </footer>
 
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/244946614043"
-     class="whatsapp-float"
-     target="_blank"
-     rel="noopener"
-     aria-label="Contactar pelo WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+    <div class="footer-bottom">
+      <span>© <span id="ano"></span> Grupo Ngana. Todos os direitos reservados.</span>
+      <span>Criamos experiências. Registamos emoções.</span>
+    </div>
 
-  <script>
-    document.getElementById("ano").textContent = new Date().getFullYear();
-  </script>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+
+<a href="https://wa.me/244946614043"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Contactar o Grupo Ngana pelo WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navlinks");
+const menuIcon = menuBtn.querySelector("i");
+
+menuBtn.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuBtn.setAttribute("aria-expanded", isOpen);
+  menuBtn.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+
+  menuIcon.className = isOpen
+    ? "fa-solid fa-xmark"
+    : "fa-solid fa-bars";
+});
+
+document.querySelectorAll(".navlinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuIcon.className = "fa-solid fa-bars";
+  });
+});
+
+document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
-=======
-  <meta name="theme-color" content="#080b10">
-  <meta name="description" content="Grupo Ngana. Criamos experiências. Registamos emoções. Fotografia, audiovisual, motion, design, streaming, luz e som.">
-  <title>Grupo Ngana | Criamos experiências</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#080b10;--panel:#101722;--blue:#2d8cff;--blue2:#78b7ff;--white:#f4f7fb;--muted:#a6b0bf;--line:rgba(70,145,235,.24)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
-    .wrap{width:min(1160px,90%);margin:auto}.eyebrow{color:var(--blue2);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700}
-    header{position:absolute;z-index:10;top:0;width:100%;border-bottom:1px solid rgba(255,255,255,.12)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:Manrope,sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:.08em}.brand span{color:var(--blue)}.navlinks{display:flex;gap:30px;color:#e1e7f0;font-size:.88rem}.navlinks a:hover{color:var(--blue2)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid var(--blue);border-radius:2px;color:white;font-size:.82rem;font-weight:700;letter-spacing:.04em;transition:.25s}.nav-cta:hover,.btn:hover{background:var(--blue);transform:translateY(-2px)}.menu{display:none;background:none;border:0;color:white;font-size:1.5rem}
-    .hero{min-height:760px;height:100svh;max-height:950px;position:relative;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,8,13,.94) 0%,rgba(5,8,13,.68) 48%,rgba(5,8,13,.18) 100%),linear-gradient(0deg,#080b10 0%,transparent 35%),url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=88') center/cover}
-    .hero-content{padding-top:90px;max-width:760px}.hero h1{font-family:Manrope,sans-serif;font-size:clamp(3.2rem,8vw,7.1rem);line-height:.99;letter-spacing:-.065em;margin:22px 0 24px;font-weight:800}.hero h1 span{color:var(--blue2)}.hero p{max-width:560px;color:#d1d8e2;font-size:1.08rem;line-height:1.8;margin-bottom:34px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap}.btn.primary{background:var(--blue);border-color:var(--blue)}.btn.ghost{border-color:rgba(255,255,255,.38)}.scroll-note{position:absolute;bottom:38px;left:5%;font-size:.68rem;letter-spacing:.2em;color:#d0d8e3;text-transform:uppercase;display:flex;align-items:center;gap:14px}.scroll-note:before{content:"";width:42px;height:1px;background:var(--blue)}
-    section{padding:110px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}.section-head h2{font:800 clamp(2.2rem,5vw,4rem)/1.05 Manrope,sans-serif;letter-spacing:-.05em;margin:14px 0 0}.section-head p{color:var(--muted);line-height:1.7;max-width:390px;margin:0}
-    .intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.intro-image{min-height:470px;background:linear-gradient(0deg,rgba(8,11,16,.2),rgba(8,11,16,.05)),url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1200&q=85') center/cover;position:relative}.intro-image:after{content:"";position:absolute;inset:18px;border:1px solid rgba(120,183,255,.55)}.intro-copy h2{font:800 clamp(2.3rem,4.4vw,4.1rem)/1.08 Manrope,sans-serif;letter-spacing:-.055em;margin:15px 0 24px}.intro-copy h2 span{color:var(--blue2)}.intro-copy p{color:var(--muted);line-height:1.9}.stats{display:flex;gap:38px;margin-top:36px}.stat strong{display:block;font:800 1.8rem Manrope;color:var(--blue2)}.stat small{color:var(--muted);font-size:.76rem}
-    .services{background:#0c1119}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{padding:30px 26px;min-height:220px;background:linear-gradient(145deg,#141e2b,#0d131c);border:1px solid rgba(255,255,255,.07);transition:.25s}.service:hover{border-color:var(--blue);transform:translateY(-5px)}.service .num{color:var(--blue2);font-size:.72rem;letter-spacing:.16em}.service h3{font:700 1.25rem Manrope;margin:35px 0 10px}.service p{color:var(--muted);font-size:.9rem;line-height:1.65;margin:0}
-    .work-grid{display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:260px 260px;gap:15px}.work{position:relative;overflow:hidden;background-size:cover;background-position:center}.work:first-child{grid-row:span 2;background-image:url('https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=85')}.work:nth-child(2){background-image:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1000&q=85')}.work:nth-child(3){background-image:url('https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85')}.work:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,7,12,.88),transparent 65%)}.work-label{position:absolute;z-index:1;bottom:24px;left:25px}.work-label small{color:var(--blue2);letter-spacing:.15em;text-transform:uppercase}.work-label h3{font:700 1.35rem Manrope;margin:7px 0 0}
-    .cta{padding:85px 0;background:linear-gradient(110deg,rgba(7,12,20,.96),rgba(13,42,75,.88)),url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1800&q=80') center/cover;text-align:center}.cta h2{font:800 clamp(2.5rem,6vw,5rem)/1.05 Manrope;letter-spacing:-.055em;margin:15px auto 20px;max-width:850px}.cta p{color:#c3cfde;max-width:570px;margin:0 auto 30px;line-height:1.8}
-    footer{padding:42px 0;border-top:1px solid var(--line)}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:25px}.footer-note{color:var(--muted);font-size:.8rem}.social{display:flex;gap:20px;color:#d7e0eb;font-size:.82rem}.social a:hover{color:var(--blue2)}
-    @media(max-width:800px){.navlinks,.nav-cta{display:none}.menu{display:block}.hero{min-height:700px;background-position:58% center}.intro{grid-template-columns:1fr;gap:38px}.intro-image{min-height:350px;order:2}.service-grid{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head p{margin-top:20px}.work-grid{grid-template-columns:1fr 1fr;grid-template-rows:250px 190px}.work:first-child{grid-column:span 2;grid-row:auto}.footer-row{flex-direction:column;align-items:flex-start}}
-    @media(max-width:520px){.wrap{width:88%}.hero h1{font-size:3.45rem}.hero p{font-size:.98rem}.service-grid{grid-template-columns:1fr}.service{min-height:190px}.work-grid{display:flex;flex-direction:column}.work{height:230px}.stats{gap:22px}.stat strong{font-size:1.5rem}section{padding:78px 0}.nav{height:72px}}
-  </style>
-</head>
-<body>
-<header><div class="wrap nav">
-  <a class="brand" href="#inicio">GRUPO <span>NGANA</span></a>
-  <nav class="navlinks"><a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#portfolio">Portefólio</a><a href="#contactos">Contactos</a></nav>
-  <a class="nav-cta" href="#contactos">FALE CONNOSCO ↗</a><button class="menu" aria-label="Abrir menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
-</div></header>
-<main>
-  <section class="hero" id="inicio"><div class="wrap hero-content">
-    <div class="eyebrow">Produção criativa · Audiovisual · Eventos</div>
-    <h1>Criamos<br><span>experiências.</span></h1>
-    <p>Criamos experiências. Registamos emoções. Damos vida a ideias através da imagem, do som, da luz e de narrativas que ficam na memória.</p>
-    <div class="hero-actions"><a class="btn primary" href="#portfolio">EXPLORAR PORTFÓLIO ↗</a><a class="btn ghost" href="#servicos">OS NOSSOS SERVIÇOS</a></div>
-  </div><div class="scroll-note">Deslize para descobrir</div></section>
-  <section id="sobre"><div class="wrap intro">
-    <div class="intro-image" role="img" aria-label="Produção audiovisual em ambiente de filmagem"></div>
-    <div class="intro-copy"><div class="eyebrow">Quem somos</div><h2>Ideias que ganham forma. <span>Momentos que ficam.</span></h2>
-      <p>O Grupo Ngana é uma marca dedicada à criação de experiências visuais e técnicas. Unimos criatividade, tecnologia e sensibilidade para contar histórias, valorizar marcas e transformar eventos em momentos memoráveis.</p>
-      <p>Da primeira ideia à execução, trabalhamos para que cada detalhe tenha intenção e cada produção tenha impacto.</p>
-      <div class="stats"><div class="stat"><strong>360°</strong><small>Soluções criativas</small></div><div class="stat"><strong>∞</strong><small>Possibilidades</small></div></div>
-    </div>
-  </div></section>
-  <section class="services" id="servicos"><div class="wrap">
-    <div class="section-head"><div><div class="eyebrow">O que fazemos</div><h2>Serviços com<br>impacto visual.</h2></div><p>Uma abordagem integrada para criar, produzir e transmitir experiências com qualidade e identidade.</p></div>
-    <div class="service-grid">
-      <article class="service"><span class="num">01 / IMAGEM</span><h3>Fotografia</h3><p>Registo profissional de pessoas, marcas, produtos e eventos.</p></article>
-      <article class="service"><span class="num">02 / VÍDEO</span><h3>Produção Audiovisual</h3><p>Captação e produção de conteúdos que contam histórias e comunicam ideias.</p></article>
-      <article class="service"><span class="num">03 / ANIMAÇÃO</span><h3>Motion Graphics</h3><p>Animação gráfica, títulos e conteúdos dinâmicos para marcas e ecrãs.</p></article>
-      <article class="service"><span class="num">04 / IDENTIDADE</span><h3>Design Gráfico</h3><p>Conceitos visuais, identidade, materiais promocionais e comunicação.</p></article>
-      <article class="service"><span class="num">05 / TRANSMISSÃO</span><h3>Live Streaming</h3><p>Transmissão em directo de eventos, conferências e experiências especiais.</p></article>
-      <article class="service"><span class="num">06 / PRODUÇÃO TÉCNICA</span><h3>Luz &amp; Som</h3><p>Iluminação e sonorização para eventos, palcos e ambientes profissionais.</p></article>
-    </div>
-  </div></section>
-  <section id="portfolio"><div class="wrap">
-    <div class="section-head"><div><div class="eyebrow">Selecção visual</div><h2>O nosso universo<br>criativo.</h2></div><p>Uma amostra visual das áreas em que trabalhamos. Esta galeria será substituída pelos projectos reais do Grupo Ngana.</p></div>
-    <div class="work-grid">
-      <a class="work" href="#contactos"><div class="work-label"><small>Produção de eventos</small><h3>Energia em cada momento</h3></div></a>
-      <a class="work" href="#contactos"><div class="work-label"><small>Fotografia</small><h3>Detalhes que contam</h3></div></a>
-      <a class="work" href="#contactos"><div class="work-label"><small>Audiovisual</small><h3>Histórias em movimento</h3></div></a>
-    </div>
-  </div></section>
-  <section class="cta" id="contactos"><div class="wrap">
-    <div class="eyebrow">Vamos criar algo memorável?</div><h2>A sua próxima ideia merece ganhar vida.</h2><p>Conte-nos o que está a imaginar. Estamos prontos para conversar sobre a sua próxima produção, evento ou projecto.</p>
-    <a class="btn primary" href="https://wa.me/" target="_blank" rel="noopener">INICIAR CONVERSA ↗</a>
-  </div></section>
-</main>
-<footer><div class="wrap footer-row"><a class="brand" href="#inicio">GRUPO <span>NGANA</span></a><div class="footer-note">Criamos experiências. Registamos emoções.</div><div class="social"><a href="#contactos">Instagram</a><a href="#contactos">Facebook</a><a href="#contactos">WhatsApp</a></div></div></footer>
-<script>
-  const menu=document.querySelector('.menu');
-  menu.addEventListener('click',()=>{const n=document.querySelector('.navlinks');n.style.display=n.style.display==='flex'?'none':'flex';n.style.flexDirection='column';n.style.position='absolute';n.style.top='72px';n.style.right='6%';n.style.background='#101722';n.style.padding='18px';n.style.border='1px solid rgba(70,145,235,.3)'});
-  document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=800)document.querySelector('.navlinks').style.display='none'}));
-</script>
-</body></html>
->>>>>>> 91932aa18a1a2827a79b6884ae1b2c4a519f98bf
