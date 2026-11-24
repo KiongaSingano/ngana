@@ -5,13 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080b10">
-<meta name="description" content="Grupo Ngana. Criamos experiências. Registamos emoções. Fotografia, audiovisual, design, streaming, luz e som.">
-
+<meta name="description" content="Grupo Ngana. Criamos experiências. Registamos emoções. Fotografia, audiovisual, design e produção de eventos.">
 <title>Grupo Ngana | Criamos experiências</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <style>
@@ -27,15 +26,12 @@
 
 * {box-sizing:border-box;margin:0;padding:0}
 
-html {
-  scroll-behavior:smooth;
-  scroll-padding-top:90px;
-}
+html {scroll-behavior:smooth;scroll-padding-top:90px}
 
 body {
   background:var(--bg);
   color:var(--white);
-  font-family:"DM Sans",sans-serif;
+  font-family:"Sora",sans-serif;
   line-height:1.7;
   overflow-x:hidden;
 }
@@ -43,8 +39,11 @@ body {
 a {color:inherit;text-decoration:none}
 button {font:inherit}
 img {max-width:100%;display:block}
-
 .wrap {width:min(1160px,90%);margin:auto}
+
+h1,h2,h3,.brand {
+  font-family:"Syne",sans-serif;
+}
 
 .eyebrow {
   color:var(--blue2);
@@ -56,14 +55,11 @@ img {max-width:100%;display:block}
 
 section {padding:105px 0}
 
-/* HEADER */
-
+/* CABEÇALHO */
 header {
   position:fixed;
   z-index:1000;
-  top:0;
-  left:0;
-  width:100%;
+  inset:0 0 auto;
   background:rgba(8,11,16,.94);
   backdrop-filter:blur(15px);
   border-bottom:1px solid var(--line);
@@ -78,10 +74,9 @@ header {
 }
 
 .brand {
-  font-family:Manrope,sans-serif;
   font-weight:800;
   font-size:1.35rem;
-  letter-spacing:.08em;
+  letter-spacing:.06em;
   white-space:nowrap;
 }
 
@@ -95,27 +90,14 @@ header {
 
 .navlinks a {
   color:#d5deea;
-  font-size:.84rem;
+  font-size:.82rem;
   font-weight:600;
-  transition:.25s;
-  position:relative;
-}
-
-.navlinks a::after {
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-8px;
-  width:0;
-  height:2px;
-  background:var(--blue);
   transition:.25s;
 }
 
 .navlinks a:hover {color:var(--blue2)}
-.navlinks a:hover::after {width:100%}
 
-.nav-cta,.btn {
+.btn,.nav-cta {
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -124,22 +106,24 @@ header {
   border:1px solid var(--blue);
   border-radius:3px;
   color:white;
-  font-size:.79rem;
+  font-family:"Sora",sans-serif;
+  font-size:.76rem;
   font-weight:700;
-  letter-spacing:.04em;
+  letter-spacing:.05em;
   transition:.3s;
+  cursor:pointer;
 }
 
-.nav-cta {
-  background:rgba(45,140,255,.12);
-  white-space:nowrap;
-}
+.nav-cta {background:rgba(45,140,255,.12);white-space:nowrap}
 
-.nav-cta:hover,.btn:hover {
+.btn:hover,.nav-cta:hover {
   background:var(--blue);
   transform:translateY(-3px);
   box-shadow:0 8px 25px rgba(45,140,255,.2);
 }
+
+.btn.primary {background:var(--blue)}
+.btn.ghost {border-color:rgba(255,255,255,.4)}
 
 .menu {
   display:none;
@@ -153,8 +137,12 @@ header {
   cursor:pointer;
 }
 
-/* HERO */
+a:focus-visible,button:focus-visible {
+  outline:2px solid var(--blue2);
+  outline-offset:4px;
+}
 
+/* HERO */
 .hero {
   min-height:760px;
   height:100vh;
@@ -168,13 +156,9 @@ header {
     url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=88") center/cover;
 }
 
-.hero-content {
-  padding-top:80px;
-  max-width:760px;
-}
+.hero-content {padding-top:80px;max-width:760px}
 
 .hero h1 {
-  font-family:Manrope,sans-serif;
   font-size:clamp(3.2rem,8vw,7.1rem);
   line-height:.99;
   letter-spacing:-.065em;
@@ -182,32 +166,17 @@ header {
   font-weight:800;
 }
 
-.hero h1 span {color:var(--blue2)}
+.hero h1 span,.intro-copy h2 span {color:var(--blue2)}
 
 .hero p {
   max-width:560px;
   color:#d1d8e2;
-  font-size:1.05rem;
+  font-size:1rem;
   line-height:1.8;
   margin-bottom:35px;
 }
 
-.hero-actions {
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
-.btn.primary {
-  background:var(--blue);
-  border-color:var(--blue);
-}
-
-.btn.ghost {
-  border-color:rgba(255,255,255,.4);
-}
-
-.btn.ghost:hover {border-color:var(--blue)}
+.hero-actions {display:flex;gap:14px;flex-wrap:wrap}
 
 .scroll-note {
   position:absolute;
@@ -230,7 +199,6 @@ header {
 }
 
 /* SOBRE */
-
 .intro {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -254,38 +222,25 @@ header {
 }
 
 .intro-copy h2 {
-  font:800 clamp(2.3rem,4.4vw,4.1rem)/1.08 Manrope,sans-serif;
+  font-size:clamp(2.3rem,4.4vw,4.1rem);
+  line-height:1.08;
   letter-spacing:-.055em;
   margin:15px 0 24px;
 }
 
-.intro-copy h2 span {color:var(--blue2)}
+.intro-copy p {color:var(--muted);margin-bottom:15px;line-height:1.9}
 
-.intro-copy p {
-  color:var(--muted);
-  line-height:1.9;
-  margin-bottom:15px;
-}
-
-.stats {
-  display:flex;
-  gap:38px;
-  margin-top:35px;
-}
+.stats {display:flex;gap:38px;margin-top:35px}
 
 .stat strong {
   display:block;
-  font:800 1.8rem Manrope;
+  font-size:1.8rem;
   color:var(--blue2);
 }
 
-.stat small {
-  color:var(--muted);
-  font-size:.76rem;
-}
+.stat small {color:var(--muted);font-size:.76rem}
 
-/* SERVIÇOS */
-
+/* SERVIÇOS E PORTFÓLIO */
 .services {background:#0c1119}
 
 .section-head {
@@ -297,16 +252,13 @@ header {
 }
 
 .section-head h2 {
-  font:800 clamp(2.2rem,5vw,4rem)/1.05 Manrope,sans-serif;
+  font-size:clamp(2.2rem,5vw,4rem);
+  line-height:1.05;
   letter-spacing:-.05em;
   margin-top:14px;
 }
 
-.section-head p {
-  color:var(--muted);
-  line-height:1.8;
-  max-width:390px;
-}
+.section-head p {color:var(--muted);max-width:390px;line-height:1.8}
 
 .service-grid {
   display:grid;
@@ -328,24 +280,9 @@ header {
   background:#142237;
 }
 
-.service .num {
-  color:var(--blue2);
-  font-size:.72rem;
-  letter-spacing:.16em;
-}
-
-.service h3 {
-  font:700 1.25rem Manrope;
-  margin:35px 0 10px;
-}
-
-.service p {
-  color:var(--muted);
-  font-size:.9rem;
-  line-height:1.7;
-}
-
-/* PORTFÓLIO */
+.service .num {color:var(--blue2);font-size:.72rem;letter-spacing:.16em}
+.service h3 {font-size:1.25rem;margin:35px 0 10px}
+.service p {color:var(--muted);font-size:.88rem;line-height:1.7}
 
 .work-grid {
   display:grid;
@@ -379,7 +316,7 @@ header {
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(8,11,16,.15);
+  background:rgba(8,11,16,.2);
   transition:.4s;
 }
 
@@ -390,30 +327,13 @@ header {
   background:linear-gradient(0deg,rgba(4,7,12,.9),transparent 70%);
 }
 
-.work:hover::before {
-  background:rgba(8,11,16,.45);
-}
+.work:hover::before {background:rgba(8,11,16,.5)}
 
-.work-label {
-  position:absolute;
-  z-index:1;
-  bottom:24px;
-  left:25px;
-}
+.work-label {position:absolute;z-index:1;bottom:24px;left:25px}
+.work-label small {color:var(--blue2);letter-spacing:.15em;text-transform:uppercase}
+.work-label h3 {font-size:1.35rem;margin-top:7px}
 
-.work-label small {
-  color:var(--blue2);
-  letter-spacing:.15em;
-  text-transform:uppercase;
-}
-
-.work-label h3 {
-  font:700 1.35rem Manrope;
-  margin-top:7px;
-}
-
-/* CONTACTO */
-
+/* CONTACTOS */
 .cta {
   padding:90px 0;
   background:
@@ -423,21 +343,16 @@ header {
 }
 
 .cta h2 {
-  font:800 clamp(2.5rem,6vw,5rem)/1.05 Manrope;
+  font-size:clamp(2.5rem,6vw,5rem);
+  line-height:1.05;
   letter-spacing:-.055em;
   margin:15px auto 20px;
   max-width:850px;
 }
 
-.cta p {
-  color:#c3cfde;
-  max-width:570px;
-  margin:0 auto 30px;
-  line-height:1.8;
-}
+.cta p {color:#c3cfde;max-width:570px;margin:0 auto 30px;line-height:1.8}
 
-/* FOOTER */
-
+/* RODAPÉ */
 footer {
   padding:65px 0 22px;
   background:#06090e;
@@ -453,7 +368,7 @@ footer {
 
 .footer-about p {
   color:var(--muted);
-  font-size:.88rem;
+  font-size:.85rem;
   max-width:330px;
   margin-top:17px;
   line-height:1.8;
@@ -461,6 +376,7 @@ footer {
 
 .footer-column h3 {
   color:var(--blue2);
+  font-family:"Sora",sans-serif;
   font-size:.78rem;
   letter-spacing:.16em;
   text-transform:uppercase;
@@ -468,34 +384,13 @@ footer {
 }
 
 .footer-column ul {list-style:none}
-
-.footer-column li {
-  margin-bottom:13px;
-  color:var(--muted);
-  font-size:.85rem;
-}
-
-.footer-column a {transition:.25s}
+.footer-column li {margin-bottom:13px;color:var(--muted);font-size:.84rem}
 .footer-column a:hover {color:var(--blue2)}
 
-.footer-contact a {
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
+.footer-contact a {display:flex;align-items:center;gap:12px}
+.footer-contact i {width:18px;color:var(--blue2)}
 
-.footer-contact i {
-  width:18px;
-  color:var(--blue2);
-}
-
-/* REDES SOCIAIS */
-
-.social {
-  display:flex;
-  gap:12px;
-  margin-top:24px;
-}
+.social {display:flex;gap:12px;margin-top:24px}
 
 .social a {
   width:43px;
@@ -516,7 +411,6 @@ footer {
   border-color:var(--blue);
   color:white;
   transform:translateY(-5px);
-  box-shadow:0 7px 20px rgba(45,140,255,.2);
 }
 
 .footer-bottom {
@@ -526,11 +420,10 @@ footer {
   justify-content:space-between;
   gap:20px;
   color:#788394;
-  font-size:.74rem;
+  font-size:.72rem;
 }
 
-/* WHATSAPP FLUTUANTE */
-
+/* WHATSAPP */
 .whatsapp-float {
   position:fixed;
   right:25px;
@@ -549,15 +442,11 @@ footer {
   transition:.3s;
 }
 
-.whatsapp-float:hover {
-  transform:scale(1.1);
-}
+.whatsapp-float:hover {transform:scale(1.1)}
 
 /* RESPONSIVIDADE */
-
 @media(max-width:900px) {
   .navlinks {gap:17px}
-  .navlinks a {font-size:.76rem}
   .nav-cta {padding:11px 14px;font-size:.7rem}
   .intro {gap:40px}
   .service-grid {grid-template-columns:repeat(2,1fr)}
@@ -570,7 +459,7 @@ footer {
   .navlinks {
     display:none;
     position:absolute;
-    top:calc(100% + 1px);
+    top:100%;
     left:5%;
     right:5%;
     padding:20px;
@@ -579,26 +468,15 @@ footer {
     flex-direction:column;
     align-items:stretch;
     gap:0;
-    box-shadow:0 15px 35px rgba(0,0,0,.4);
   }
 
   .navlinks.open {display:flex}
-
-  .navlinks a {
-    display:block;
-    padding:12px 5px;
-    font-size:.9rem;
-    border-bottom:1px solid rgba(255,255,255,.06);
-  }
-
-  .navlinks a::after {display:none}
+  .navlinks a {padding:12px 5px;border-bottom:1px solid rgba(255,255,255,.06)}
 }
 
 @media(max-width:650px) {
   section {padding:78px 0}
-
   .wrap {width:88%}
-
   .nav {min-height:72px}
 
   .hero {
@@ -608,58 +486,30 @@ footer {
   }
 
   .hero-content {padding-top:75px}
-
   .hero h1 {font-size:3.45rem}
+  .hero p {font-size:.95rem}
 
-  .hero p {font-size:.98rem}
-
-  .hero-actions {
-    flex-direction:column;
-    align-items:stretch;
-  }
-
+  .hero-actions {flex-direction:column;align-items:stretch}
   .hero-actions .btn {width:100%}
 
-  .intro {
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  .intro-image {
-    min-height:330px;
-    order:2;
-  }
+  .intro {grid-template-columns:1fr;gap:35px}
+  .intro-image {min-height:330px;order:2}
 
   .section-head {display:block}
-
   .section-head p {margin-top:20px}
 
   .service-grid {grid-template-columns:1fr}
-
   .service {min-height:190px}
 
-  .work-grid {
-    display:flex;
-    flex-direction:column;
-  }
-
+  .work-grid {display:flex;flex-direction:column}
   .work {height:240px}
 
   .stats {gap:22px}
-
   .stat strong {font-size:1.5rem}
 
   .cta {padding:75px 0}
-
-  .footer-grid {
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  .footer-bottom {
-    flex-direction:column;
-    gap:8px;
-  }
+  .footer-grid {grid-template-columns:1fr;gap:35px}
+  .footer-bottom {flex-direction:column;gap:8px}
 
   .whatsapp-float {
     width:53px;
@@ -678,11 +528,8 @@ footer {
 
 <body>
 
-<!-- CABEÇALHO -->
-
 <header>
   <div class="wrap nav">
-
     <a class="brand" href="#inicio">GRUPO <span>NGANA</span></a>
 
     <nav class="navlinks" id="navlinks">
@@ -700,23 +547,16 @@ footer {
     <button class="menu" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navlinks">
       <i class="fa-solid fa-bars"></i>
     </button>
-
   </div>
 </header>
 
 <main>
 
-<!-- INÍCIO -->
-
 <section class="hero" id="inicio">
   <div class="wrap hero-content">
-
     <div class="eyebrow">Produção criativa · Audiovisual · Eventos</div>
 
-    <h1>
-      Criamos<br>
-      <span>experiências.</span>
-    </h1>
+    <h1>Criamos<br><span>experiências.</span></h1>
 
     <p>
       Criamos experiências. Registamos emoções.
@@ -728,31 +568,23 @@ footer {
       <a class="btn primary" href="#portfolio">
         EXPLORAR PORTFÓLIO <i class="fa-solid fa-arrow-right"></i>
       </a>
-
       <a class="btn ghost" href="#servicos">
         OS NOSSOS SERVIÇOS <i class="fa-solid fa-play"></i>
       </a>
     </div>
-
   </div>
 
   <div class="scroll-note">Deslize para descobrir</div>
 </section>
 
-<!-- SOBRE -->
-
 <section id="sobre">
   <div class="wrap intro">
-
     <div class="intro-image" role="img" aria-label="Produção audiovisual"></div>
 
     <div class="intro-copy">
       <div class="eyebrow">Quem somos</div>
 
-      <h2>
-        Ideias que ganham forma.
-        <span>Momentos que ficam.</span>
-      </h2>
+      <h2>Ideias que ganham forma. <span>Momentos que ficam.</span></h2>
 
       <p>
         O Grupo Ngana é uma marca dedicada à criação de experiências
@@ -771,22 +603,17 @@ footer {
           <strong>360°</strong>
           <small>Soluções criativas</small>
         </div>
-
         <div class="stat">
           <strong>∞</strong>
           <small>Possibilidades</small>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- SERVIÇOS -->
-
 <section class="services" id="servicos">
   <div class="wrap">
-
     <div class="section-head">
       <div>
         <div class="eyebrow">O que fazemos</div>
@@ -800,7 +627,6 @@ footer {
     </div>
 
     <div class="service-grid">
-
       <article class="service">
         <span class="num">01 / IMAGEM</span>
         <h3>Fotografia</h3>
@@ -836,16 +662,12 @@ footer {
         <h3>Luz &amp; Som</h3>
         <p>Iluminação e sonorização para eventos, palcos e ambientes profissionais.</p>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- PORTFÓLIO -->
-
 <section id="portfolio">
   <div class="wrap">
-
     <div class="section-head">
       <div>
         <div class="eyebrow">Selecção visual</div>
@@ -859,7 +681,6 @@ footer {
     </div>
 
     <div class="work-grid">
-
       <a class="work" href="#contactos" aria-label="Produção de eventos">
         <div class="work-label">
           <small>Produção de eventos</small>
@@ -880,16 +701,12 @@ footer {
           <h3>Histórias em movimento</h3>
         </div>
       </a>
-
     </div>
   </div>
 </section>
 
-<!-- CONTACTOS -->
-
 <section class="cta" id="contactos">
   <div class="wrap">
-
     <div class="eyebrow">Vamos criar algo memorável?</div>
 
     <h2>A sua próxima ideia merece ganhar vida.</h2>
@@ -904,17 +721,13 @@ footer {
       INICIAR CONVERSA
       <i class="fa-solid fa-arrow-up-right-from-square"></i>
     </a>
-
   </div>
 </section>
 
 </main>
 
-<!-- RODAPÉ -->
-
 <footer>
   <div class="wrap">
-
     <div class="footer-grid">
 
       <div class="footer-about">
@@ -927,25 +740,15 @@ footer {
         </p>
 
         <div class="social">
-
-          <a href="https://www.instagram.com/kionga_singano/"
-             target="_blank" rel="noopener"
-             aria-label="Instagram">
+          <a href="https://www.instagram.com/kionga_singano/" target="_blank" rel="noopener" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-
-          <a href="https://www.facebook.com/kiongasingano"
-             target="_blank" rel="noopener"
-             aria-label="Facebook">
+          <a href="https://www.facebook.com/kiongasingano" target="_blank" rel="noopener" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-
-          <a href="https://wa.me/244946614043"
-             target="_blank" rel="noopener"
-             aria-label="WhatsApp">
+          <a href="https://wa.me/244946614043" target="_blank" rel="noopener" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-
         </div>
       </div>
 
@@ -962,33 +765,25 @@ footer {
 
       <div class="footer-column footer-contact">
         <h3>Contactos</h3>
-
         <ul>
           <li>
             <a href="tel:+244946614043">
-              <i class="fa-solid fa-phone"></i>
-              946 614 043
+              <i class="fa-solid fa-phone"></i> 946 614 043
             </a>
           </li>
-
           <li>
             <a href="https://wa.me/244946614043" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i>
-              WhatsApp
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
             </a>
           </li>
-
           <li>
             <a href="https://www.instagram.com/kionga_singano/" target="_blank" rel="noopener">
-              <i class="fa-brands fa-instagram"></i>
-              Instagram
+              <i class="fa-brands fa-instagram"></i> Instagram
             </a>
           </li>
-
           <li>
             <a href="https://www.facebook.com/kiongasingano" target="_blank" rel="noopener">
-              <i class="fa-brands fa-facebook-f"></i>
-              Facebook
+              <i class="fa-brands fa-facebook-f"></i> Facebook
             </a>
           </li>
         </ul>
@@ -1000,17 +795,10 @@ footer {
       <span>© <span id="ano"></span> Grupo Ngana. Todos os direitos reservados.</span>
       <span>Criamos experiências. Registamos emoções.</span>
     </div>
-
   </div>
 </footer>
 
-<!-- WHATSAPP FLUTUANTE -->
-
-<a href="https://wa.me/244946614043"
-   class="whatsapp-float"
-   target="_blank"
-   rel="noopener"
-   aria-label="Contactar o Grupo Ngana pelo WhatsApp">
+<a href="https://wa.me/244946614043" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar o Grupo Ngana pelo WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
@@ -1020,20 +808,17 @@ const navLinks = document.getElementById("navlinks");
 const menuIcon = menuBtn.querySelector("i");
 
 menuBtn.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-
-  menuBtn.setAttribute("aria-expanded", isOpen);
-  menuBtn.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
-
-  menuIcon.className = isOpen
-    ? "fa-solid fa-xmark"
-    : "fa-solid fa-bars";
+  const open = navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", open);
+  menuBtn.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  menuIcon.className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
 });
 
-document.querySelectorAll(".navlinks a").forEach(link => {
+navLinks.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
     menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-label", "Abrir menu");
     menuIcon.className = "fa-solid fa-bars";
   });
 });
